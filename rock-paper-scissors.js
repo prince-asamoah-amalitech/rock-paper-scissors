@@ -1,3 +1,4 @@
+//Receive user choices
 const getUserChoice = (userInput) => {
   userInput = userInput.toLowerCase();
 
@@ -8,6 +9,7 @@ const getUserChoice = (userInput) => {
   }
 }
 
+//Generates choice for computer
 const getComputerChoice = () => {
   let randomNumber = Math.floor(Math.random() * 3);
   let computerChoice = '';
@@ -21,6 +23,7 @@ const getComputerChoice = () => {
   }
 }
 
+//Check users and computers choice to determine winner
 const determineWinner = (userChoice, computerChoice) => {
   if (userChoice === 'bomb') {
     return 'You won!';
@@ -54,6 +57,7 @@ const determineWinner = (userChoice, computerChoice) => {
   }
 }
 
+//Start game by calling this function
 const playGame = () => {
   let userChoice = getUserChoice('bomb');
   console.log(userChoice);
